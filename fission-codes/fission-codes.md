@@ -4,14 +4,19 @@ title: FISSION Codes
 has_children: true
 parent: FISSION Codes
 permalink: /fission-codes/
+nav_order: 2
 ---
 
-# ERC-1066: FISSION Codes
-## Broadly applicable status codes for Ethereum smart contracts.
+# FISSION Status Codes
+{: .no_toc }
+## Broadly applicable status codes for smart contracts.
+{: .no_toc }
+
+* Submitted to the Ethereum Improvement Process as ERC-1066
 
 [![CircleCI](https://circleci.com/gh/fission-suite/fission-codes.svg?style=svg)](https://circleci.com/gh/expede/ethereum-status-codes) [![Maintainability](https://api.codeclimate.com/v1/badges/a1ef619028bc0786c327/maintainability)](https://codeclimate.com/github/expede/ethereum-status-codes/maintainability)
 
-This standard outlines a common set of Ethereum status codes (ESC) in the same
+This standard outlines a common set of Status Codes in the same
 vein as HTTP statuses. This provides a shared set of signals to allow smart contracts
 to react to situations autonomously, expose localized error messages to users, and so on.
 
@@ -19,22 +24,26 @@ The current state of the art is to either `revert` and require human interventio
 or return a Boolean pass/fail status. Status codes are similar-but-orthogonal
 to `revert`ing with a reason, but aimed at automation and translation.
 
-As is the case with HTTP, having a standard set of known codes has many benefits for developers.
-They remove friction from needing to develop your own schemes for every contract,
-makes inter-contract automation easier, and makes it easier to broadly understand
-which of the finite states your request produced. Importantly, it makes it much easier
-to distinguish between expected errors states, and truly exceptional conditions
-that require halting execution.
+As is the case with HTTP, having a standard set of known codes has many benefits for developers:
 
-## Motivation
+* They remove friction from needing to develop your own schemes for every contract,
+* makes inter-contract automation easier, and
+* makes it easier to broadly understand which of the finite states your request produced.
 
-### Autonomy
+Importantly, it makes it much easier to distinguish between expected errors states, and truly exceptional conditions that require halting execution.
+
+1. Table of Contents
+{:toc}
+
+# Motivation
+
+## Autonomy
 
 Smart contracts are largely intended to be autonomous. While each contract may
 define a specific interface, having a common set of semantic codes can help
 developers write code that can react appropriately to various situations.
 
-### Semantic Density
+## Semantic Density
 
 HTTP status codes are widely used for this purpose. BEAM languages use atoms
 and tagged tuples to signify much the same information. Both provide a lot of
@@ -44,7 +53,7 @@ that needs to decide what to do next.
 ESCs convey a much richer set of information than Booleans,
 and are able to be reacted to autonomously unlike arbitrary strings.
 
-### User Feedback
+## User Feedback
 
 Since status codes are finite and known in advance, we can provide global,
 human-readable sets of status messages. These may also be translated into any language,
@@ -53,16 +62,16 @@ differing levels of technical detail, added as `revert` messages, natspecs, and 
 We also see a desire for this [in transactions](http://eips.ethereum.org/EIPS/eip-658),
 and there's no reason that ESCs couldn't be used by the EVM itself.
 
-### More than Pass/Fail
+## More than Pass/Fail
 
 While clearly related, status codes are complementary to "revert with reason".
 ESCs are not limited to rolling back the transaction, and may represent known error states
 without halting execution. They may also represent off-chain conditions,
 supply a string to revert, signal time delays, and more.
 
-## Specification
+# Specification
 
-### Format
+## Format
 
 Codes are returned as the first value of potentially multiple return values.
 
@@ -124,7 +133,7 @@ explanatory and layout reasons.
 
 Unspecified codes are _not_ free for arbitrary use, but rather open for further specification.
 
-#### Generic
+## Generic
 
 General codes. These double as bare "reasons", since `0x01 == 1`.
 
@@ -147,7 +156,7 @@ General codes. These double as bare "reasons", since `0x01 == 1`.
 | `0x0E`          |                         |
 | `0x0F`          | Meta or Info Only       |
 
-#### Permission
+## Permission
 
 Related to permisson, authorization, approval, and so on.
 
@@ -170,7 +179,7 @@ Related to permisson, authorization, approval, and so on.
 | `0x1E`          |                          |
 | `0x1F`          | Permission Meta or Info  |
 
-#### Find, Match, &c
+## Find, Match, &c
 
 This range is broadly intended for finding and matching.
 Data lookups and order matching are two common use cases.
@@ -194,7 +203,7 @@ Data lookups and order matching are two common use cases.
 | `0x2E`          |                          |
 | `0x2F`          | Matching Meta or Info    |
 
-#### Negotiation, Terms, and Offers
+## Negotiation, Terms, and Offers
 
 Negotiation, and very broadly the flow of such transactions.
 Note that "other party" may be more than one actor (not necessarily the sender).
@@ -218,7 +227,7 @@ Note that "other party" may be more than one actor (not necessarily the sender).
 | `0x3E`          |                             |
 | `0x3F`          | Negotiation Meta or Info    |
 
-#### Availability
+## Availability
 
 Service or action availability.
 
@@ -241,27 +250,27 @@ Service or action availability.
 | `0x4E`          |                             |
 | `0x4F`          | Availability Meta or Info   |
 
-#### `0x5_` TBD
+### `0x5_` TBD
 
 Currently unspecified
 
-#### `0x6_` TBD
+### `0x6_` TBD
 
 Currently unspecified
 
-#### `0x7_` TBD
+### `0x7_` TBD
 
 Currently unspecified
 
-#### `0x8_` TBD
+### `0x8_` TBD
 
 Currently unspecified
 
-#### `0x9_` TBD
+### `0x9_` TBD
 
 Currently unspecified
 
-#### Application-Specific Codes
+## Application-Specific Codes
 
 Contracts may have special states that they need to signal.
 This proposal only outlines the broadest meanings, but implementers may have very
@@ -286,19 +295,19 @@ specific meanings for each, as long as they are coherent with the broader defini
 | `0xAE`          |                                 |
 | `0xAF`          | App-Specific Meta or Info       |
 
-#### `0xB_` TBD
+### `0xB_` TBD
 
 Currently unspecified
 
-#### `0xC_` TBD
+### `0xC_` TBD
 
 Currently unspecified
 
-#### `0xD_` TBD
+### `0xD_` TBD
 
 Currently unspecified
 
-#### Cryptography and Authentication
+## Cryptography and Authentication
 
 Actions around signatures, cryptography, signing, and application-level authentication.
 
@@ -324,7 +333,7 @@ or process used.
 | `0xEE`          |                             |
 | `0xEF`          | Crypto Info or Meta         |
 
-#### `0xF0` Off-Chain
+## `0xF0` Off-Chain
 
 For off-chain actions. Much like th `0x0_: Generic` range, `0xF_` is very general,
 and does little to modify the reason.
@@ -472,11 +481,11 @@ AwesomeCoin                 DEX                     TraderBot
              +                          +                         +                         +                   +
 ```
 
-## Rationale
+# Rationale
 
-### Encoding
+## Encoding
 
-ESCs are encoded as a `byte`. Hex values break nicely into high and low nibbles:
+Status Codes are encoded as a `byte`. Hex values break nicely into high and low nibbles:
 `category` and `reason`. For instance, `hex"01"` stands for general success
 and `hex"00"` for general failure.
 
@@ -484,7 +493,7 @@ and `hex"00"` for general failure.
 a `bytes32` (or similar) if desired. It is also easily interoperable with `uint8`,
 cast from `enum`s, and so on.
 
-#### Alternatives
+## Alternatives
 
 Alternate schemes include `bytes32` and `uint8`. While these work reasonably
 well, they have drawbacks.
@@ -501,7 +510,7 @@ status codes to be returned, which is often more information than strictly nesse
 This can lead to paradoxical results (ex `0x00` and `0x01` together),
 or greater resorces allocated to interpreting 256<sup>4</sup> (4.3 billion) permutations.
 
-### Multiple Returns
+## Multiple Returns
 
 While there may be cases where packing a byte array of ESCs may make sense, the simplest,
 most forwards-compatible method of transmission is as the first value of a multiple return.
@@ -510,7 +519,7 @@ Familiarity is also a motivating factor. A consistent position and encoding toge
 follow the principle of least surprise. It is both viewable as a "header" in the HTTP analogy,
 or like the "tag" in BEAM tagged tupples.
 
-### Human Readable
+## Human Readable
 
 Developers should not be required to memorize 256 codes. However, they break nicely into a table.
 Cognitive load is lowered by organizing the table into categories and reasons.
@@ -519,31 +528,31 @@ Cognitive load is lowered by organizing the table into categories and reasons.
 While this repository includes helper enums, we have found working directly in
 the hex values to be quite natural. ESC `0x10` is just as comfortable as HTTP 401, for example.
 
-### Extensiblilty
+## Extensiblilty
 
 The `0xA` category is reserved for application-specific statuses.
 In the case that 256 codes become insufficient, `bytes1` may be embedded in larger byte arrays.
 
-### EVM Codes
+## EVM Codes
 
 The EVM also returns a status code in transactions; specifically `0x00` and `0x01`.
 This proposal both matches the meanings of those two codes, and could later be used
 at the EVM level.
 
-### Empty Space
+## Empty Space
 
 Much like how HTTP status codes have large unused ranges, there are totally empty
 sections in this proposal. The intent is to not impose a complete set of codes up front,
 and to allow users to suggest uses for these spaces as time progresses.
 
-### Nibble Order
+## Nibble Order
 
 Nibble order makes no difference to the machine, and is purely mnemonic.
 This design was originally in opposite order, but changed it for a few convenience factors.
 Since it's a different scheme from HTTP, it may feel strange initially,
 but becomes very natural after a couple hours of use.
 
-#### Short Forms
+## Short Forms
 
 Generic is `0x0_`, general codes are consistent with their integer representations
 
@@ -551,7 +560,7 @@ Generic is `0x0_`, general codes are consistent with their integer representatio
 hex"1" == hex"01" == 1 // with casting
 ```
 
-#### Contract Categories
+## Contract Categories
 
 Many applications will always be part of the same category.
 For instance, validation will generally be in the `0x10` range.
@@ -570,7 +579,7 @@ contract Whitelist {
 }
 ```
 
-#### Helpers
+## Helpers
 
 This above also means that working with app-specific enums is slightly easier:
 
@@ -595,7 +604,7 @@ function appCode(Sleep _state) returns (byte code) {
 }
 ```
 
-## Implementation
+# Implementation
 
 Reference cases and helper libraries (Solidity and JS) can be found at:
 

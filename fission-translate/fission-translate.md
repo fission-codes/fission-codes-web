@@ -4,14 +4,22 @@ title: FISSION Translate
 has_children: true
 parent: FISSION Translate
 permalink: /fission-translate/
+nav_order: 3
 ---
 
-# FISSION Translate - ERC-1444
+# FISSION Translate
+{: .no_toc }
 ## A method of converting machine codes to human-readable text in any language and phrasing.
+{: .no_toc }
+
+* Submitted to the Ethereum Improvement Process as ERC-1044
 
 An on-chain system for providing user feedback by converting machine-efficient codes into human-readable strings in any language or phrasing. The system does not impose a list of languages, but rather lets users create, share, and use the localizated text of their choice.
 
-## Motivation
+1. Table of Contents
+{:toc}
+
+# Motivation
 
 There are many cases where an end user needs feedback or instruction from a smart contact. Directly exposing numeric codes does not make for good UX or DX. If Ethereum is to be a truly global system usable by experts and lay persons alike, systems to provide feedback on what happened during a transaction are needed in as many languages as possible.
 
@@ -19,9 +27,9 @@ Returning a hard-coded string (typically in English) only serves a small segment
 
 There are several machine efficient ways of representing intent, status, state transition, and other semantic signals including booleans, enums and [ERC-1066 codes](https://eips.ethereum.org/EIPS/eip-1066). By providing human-readable messages for these signals, the developer experience is enhanced by returning easier to consume information with more context (ex. `revert`). End user experience is enhanced by providing text that can be propagated up to the UI.
 
-## Specification
+# Specification
 
-### Contract Architecture
+## Contract Architecture
 
 Two types of contract: `LocalizationPreferences`, and `Localization`s.
 
@@ -49,7 +57,7 @@ The `LocalizationPreferences` contract functions as a proxy for `tx.origin`.
                                                                    +--------------+
 ```
 
-### `Localization`
+## `Localization`
 
 A contract that holds a simple mapping of codes to their text representations.
 
@@ -59,7 +67,7 @@ interface Localization {
 }
 ```
 
-#### `textFor`
+### `textFor`
 
 Fetches the localized text representation.
 
@@ -67,7 +75,7 @@ Fetches the localized text representation.
 function textFor(bytes32 _code) external view returns (string _text);
 ```
 
-### `LocalizationPreferences`
+## `LocalizationPreferences`
 
 A proxy contract that allows users to set their preferred `Localization`. Text lookup is delegated to the user's preferred contract.
 
@@ -80,7 +88,7 @@ interface LocalizationPreferences {
 }
 ```
 
-#### `set`
+### `set`
 
 Registers a user's preferred `Localization`. The registering user SHOULD be considered `tx.origin`.
 
@@ -88,7 +96,7 @@ Registers a user's preferred `Localization`. The registering user SHOULD be cons
 function set(Localization _localization) external;
 ```
 
-#### `textFor`
+### `textFor`
 
 Retrieve text for a code found at the user's preferred `Localization` contract.
 
@@ -98,7 +106,7 @@ The first return value (`bool _wasFound`) represents if the text is available fr
 function textFor(bytes32 _code) external view returns (bool _wasFound, string _text);
 ```
 
-### String Format
+## String Format
 
 All strings MUST be encoded as [UTF-8](http://www.ietf.org/rfc/rfc3629.txt).
 
@@ -109,7 +117,7 @@ All strings MUST be encoded as [UTF-8](http://www.ietf.org/rfc/rfc3629.txt).
 "Feel free to be creative: (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
 ```
 
-### Templates
+## Templates
 
 Template strings are allowed, and MUST follow the [ANSI C `printf`](http://pubs.opengroup.org/onlinepubs/009696799/utilities/printf.html) conventions.
 
@@ -123,15 +131,15 @@ Text with 2 or more arguments SHOULD use the POSIX parameter field extension.
 "Knock knock. Who's there? %1$s. %1$s who? %2$s!"
 ```
 
-## Rationale
+# Rationale
 
-### `bytes32` Keys
+## `bytes32` Keys
 
-`bytes32` is very efficient since it is the EVM's base word size. Given the enormous number of elements (|A| > 1.1579 × 10<sup>77</sup>), it can embed nearly any practical signal, enum, or state. In cases where an application's key is longer than `bytes32`, hashing that long key can map that value into the correct width.
+`bytes32` is very efficient since it is the EVM's base word size. Given the enormous number of elements (```|A| > 1.1579 × 10```<sup>77</sup>), it can embed nearly any practical signal, enum, or state. In cases where an application's key is longer than `bytes32`, hashing that long key can map that value into the correct width.
 
 Designs that use datatypes with small widths than `bytes32` (such as `bytes1` in [ERC-1066](https://eips.ethereum.org/EIPS/eip-1066)) can be directly embedded into the larger width. This is a trivial one-to-one mapping of the smaller set into the the larger one.
 
-### Local vs Globals and Singletons
+## Local vs Globals and Singletons
 
 This spec has opted to not _force_ a single global registry, and rather allow any contract and use case deploy their own system. This allows for more flexibility, and does not restrict the community for opting to use singleton `LocalizationPreference` contracts for common use cases, share `Localization`s between different proxys, delegate translations between `Localization`s, and so on.
 
@@ -141,42 +149,42 @@ Rather the dispersing several `LocalizationPreference`s for different use cases 
 
 For these reasons, this spec chooses the more decentralized, lightweight, free approach, at the cost of on-chain discoverability. A registry could still be compiled, but would be difficult to enforce, and is out of scope of this spec.
 
-### Off Chain Storage
+## Off Chain Storage
 
 A very viable alternative is to store text off chain, with a pointer to the translations on-chain, and emit or return a `bytes32` code for another party to do the lookup. It is difficult to guarantee that off-chain resources will be available, and requires coordination from some other system like a web server to do the code-to-text matching. This is also not compatible with `revert` messages.
 
-### ASCII vs UTF-8 vs UTF-16
+## ASCII vs UTF-8 vs UTF-16
 
 UTF-8 is the most widely used encoding at time of writing. It contains a direct embedding of ASCII, while providing characters for most natural languages, emoji, and special characters.
 
 Please see the [UTF-8 Everywhere Manifesto](http://utf8everywhere.org/) for more information.
 
-### When No Text is Found
+## When No Text is Found
 
 Returning a blank string to the requestor fully defeats the purpose of a localization system. The two options for handling missing text are:
 
 1. A generic "text not found" message in the preferred language
 2. The actual message, in a different language
 
-#### Generic Option
+### Generic Option
 
-This designed opted to not use generic fallback text. It does not provide any useful information to the user other than to potentially contact the `Localization` maintainer (if one even exists and updating is even possible).
+This design opted to not use generic fallback text. It does not provide any useful information to the user other than to potentially contact the `Localization` maintainer (if one even exists and updating is even possible).
 
-#### Fallback Option
+### Fallback Option
 
 The design outlined in this proposal is to providing text in a commonly used language (ex. English or Mandarin). First, this is the language that will be routed to if the user has yet to set a preference. Second, there is a good chance that a user may have _some_ proficiency with the language, or at least be able to use an automated translation service.
 
 Knowing that the text fell back via `textFor`s first return field boolean is _much_ simpler than attempting language detection after the fact. This information is useful for certain UI cases. for example where there may be a desire to explain why localization fell back.
 
-### Decentralized Text Crowdsourcing
+## Decentralized Text Crowdsourcing
 
 In order for Ethereum to gain mass adoption, users must be able to interact with it in the language, phrasing, and level of detail that they are most comfortable with. Rather than imposing a fixed set of translations as in a traditional, centralized application, this EIP provides a way for anyone to create, curate, and use translations. This empowers the crowd to supply culturally and linguistically diverse messaging, leading to broader and more distributed access to information.
 
-### `printf`-style Format Strings
+## `printf`-style Format Strings
 
 C-style `printf` templates have been the de facto standard for some time. They have wide compatibility across most languages (either in standard or third-party libraries). This makes it much easier for the consuming program to interpolate strings with low developer overhead.
 
-#### Parameter Fields
+### Parameter Fields
 
 The POSIX parameter field extension is important since languages do not share a common word order. Parameter fields enable the reuse and rearrangement of arguments in different localizations.
 
@@ -185,7 +193,7 @@ The POSIX parameter field extension is important since languages do not share a 
 // => "Mercury is an element with the atomic number 80!"
 ```
 
-#### Simplified Localizations
+### Simplified Localizations
 
 Localization text does not require use of all parameters, and may simply ignore values. This can be useful for not exposing more technical information to users that would otherwise find it confusing.
 
@@ -203,7 +211,7 @@ sprintf("%1$s é um elemento", "Mercurio", 80)
 ;; => Element #80
 ```
 
-### Interpolation Strategy
+## Interpolation Strategy
 
 Please note that it is highly advisable to return the template string _as is_, with arguments as multiple return values or fields in an `event`, leaving the actual interpolation to be done off chain.
 
@@ -233,7 +241,7 @@ printf(template, atomName, 80);
 // => "Merkur ist ein Element mit der Ordnungszahl 80!"
 ```
 
-### Unspecified Behaviour
+## Unspecified Behaviour
 
 This spec does not specify:
 
@@ -252,7 +260,7 @@ This spec does not specify:
 
 These are intentionally left open. There are many cases for each of these, and restricting any is fully beyond the scope of this proposal.
 
-## Implementation
+# Implementation
 
 Reference cases and helper libraries (Solidity and JS) can be found at:
 
