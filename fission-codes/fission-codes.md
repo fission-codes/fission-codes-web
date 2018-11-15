@@ -75,7 +75,7 @@ supply a string to revert, signal time delays, and more.
 
 Codes are returned as the first value of potentially multiple return values.
 
-```solidity
+```js
 // Status only
 
 function isInt(uint num) public pure returns (byte status) {
@@ -361,7 +361,7 @@ Among other things, the meta code `0xFF` may be used to describe what the off-ch
 
 ### Example Function Change
 
-```solidity
+```js
 uint256 private startTime;
 mapping(address => uint) private counters;
 
@@ -556,7 +556,7 @@ but becomes very natural after a couple hours of use.
 
 Generic is `0x0_`, general codes are consistent with their integer representations
 
-```solidity
+```js
 hex"1" == hex"01" == 1 // with casting
 ```
 
@@ -565,7 +565,7 @@ hex"1" == hex"01" == 1 // with casting
 Many applications will always be part of the same category.
 For instance, validation will generally be in the `0x10` range.
 
-```solidity
+```js
 contract Whitelist {
     mapping(address => bool) private whitelist;
     uint256 private deadline;
@@ -583,7 +583,7 @@ contract Whitelist {
 
 This above also means that working with app-specific enums is slightly easier:
 
-```solidity
+```js
 enum Sleep {
     Awake,
     Asleep,

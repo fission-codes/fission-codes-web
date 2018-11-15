@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-nav_order: 5
+nav_order: 1
 has_children: false
 ---
 
@@ -9,16 +9,20 @@ has_children: false
 
 # Powering microservices for Web3
 
+{% comment %}
 <!-- Pink RGBA(255,82,116, .2) -->
 <!-- Purple RGBA(100,70,250, .2) -->
+{% endcomment %}
 
-<div style="background-color: RGBA(100,70,250, .2); padding: 0.3em 2.0em 0.5em 2.0em">
-  <h2>Completing the Consensys Tachyon Accelerator</h2>
-  <p>We're proud to be graduating from the <a href="https://tachyoncv.vc/">Consensys Tachyon Blockchain Accelerator</a> program.</p>
-  <p>The FISSION Suite project is being guided by the Special Projects & Decentralized Engineering Company, a US-based foundation, dedicated to supporting open source projects.</p>
-</div>
+{% comment %}
+## Powering microservices for Web3
 
----
+Microservices are being used in the traditional web to build small, nimble, pieces of code that communicate to each other through messages.
+
+Today, developers are deploying smart contracts that only talk to their own systems, or at best writing custom code to understand a particular contract's interfaces.
+
+With FISSION, individual smart contracts can be reviewed, verified, and hardened - and have their interactions defined as messages.
+{% endcomment %}
 
 <div class="fs-6">
 At the beginning of the web, HTTP's status codes empowered the API-driven interoperability of the entire Internet.<br /><br />
@@ -27,13 +31,24 @@ At the beginning of the web, HTTP's status codes empowered the API-driven intero
 
 ---
 
+<div style="background-color: RGBA(100,70,250, .2); padding: 0.3em 2.0em 0.5em 2.0em">
+  <h2>November 2018: Completing the Consensys Tachyon Accelerator</h2>
+  <img alt="Tachyon Accelerator by Consensys Ventures - Logo" src="/assets/images/tachyon.png"/>
+  <p>We're proud to be graduating from the <a href="https://tachyoncv.vc/">Consensys Tachyon Blockchain Accelerator</a> program. Thank you to the whole team for your support and guidance over the last few months! </p>
+  <p>The FISSION Suite project is being guided by the <a href="https://spade.builders">Special Projects & Decentralized Engineering Company</a>, a US-based foundation, dedicated to supporting open source projects.</p>
+  <p><a href="mailto:hello@spade.builders" class="btn btn-purple">Get in touch with the SPADE team</a></p>
+</div>
+
+---
+
 # Powered by FISSION
 
-There are a number of projects and supporters using and promoting FISSION. We'd love to hear how you're using it!
+There are a number of projects and supporters using and promoting FISSION.
 
-* Consensys Diligence
-* Security Token Standards, Polymath
-*
+* The team at [Consensys Diligence](https://consensys.net/diligence/) have given great feedback and support
+* [ERC1410](https://github.com/ethereum/EIPs/issues/1410) and related Security Token standards, being developed by a number of teams including [Polymath](https://polymath.network/)
+
+We'd love to hear how you're using FISSION. Let us know!
 
 {% comment %}
 
