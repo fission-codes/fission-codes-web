@@ -9,9 +9,33 @@ has_children: false
 
 # Powering microservices for Web3
 
-At the beginning of the web, HTTP's status codes empowered the API-driven interoperability of the entire Internet.
+<!-- Pink RGBA(255,82,116, .2) -->
+<!-- Purple RGBA(100,70,250, .2) -->
 
-FISSION Codes are the base foundation for bringing the same level of interoperability and re-use to the entire Web3 Stack.
+<div style="background-color: RGBA(100,70,250, .2); padding: 0.3em 2.0em 0.5em 2.0em">
+  <h2>Completing the Consensys Tachyon Accelerator</h2>
+  <p>We're proud to be graduating from the <a href="https://tachyoncv.vc/">Consensys Tachyon Blockchain Accelerator</a> program.</p>
+  <p>The FISSION Suite project is being guided by the Special Projects & Decentralized Engineering Company, a US-based foundation, dedicated to supporting open source projects.</p>
+</div>
+
+---
+
+<div class="fs-6">
+At the beginning of the web, HTTP's status codes empowered the API-driven interoperability of the entire Internet.<br /><br />
+<strong>FISSION Codes</strong> are the base foundation for bringing the same level of interoperability and re-use to the entire Web3 Stack.
+</div>
+
+---
+
+# Powered by FISSION
+
+There are a number of projects and supporters using and promoting FISSION. We'd love to hear how you're using it!
+
+* Consensys Diligence
+* Security Token Standards, Polymath
+*
+
+{% comment %}
 
 {% for post in site.posts limit:1 %}
   <article style="border: 1px black; background: cream">
@@ -43,12 +67,4 @@ FISSION Codes are the base foundation for bringing the same level of interoperab
   {% unless forloop.last %}<div class="separater"></div>{% endunless %}
 {% endfor %}
 
-# Components
-
-* [FISSION Codes](/fission-codes/)
-* [FISSION Translate](/fission-translate)
-
-## Planned
-
-* FISSION Web Bridge
-* FISSION Interchain
+{% endcomment %}

@@ -14,7 +14,7 @@ nav_order: 2
 
 * Submitted to the Ethereum Improvement Process as ERC-1066
 
-[![CircleCI](https://circleci.com/gh/fission-suite/fission-codes.svg?style=svg)](https://circleci.com/gh/expede/ethereum-status-codes) [![Maintainability](https://api.codeclimate.com/v1/badges/a1ef619028bc0786c327/maintainability)](https://codeclimate.com/github/expede/ethereum-status-codes/maintainability)
+<!-- [![CircleCI](https://circleci.com/gh/fission-suite/fission-codes.svg?style=svg)](https://circleci.com/gh/expede/ethereum-status-codes) --> [![Maintainability](https://api.codeclimate.com/v1/badges/a1ef619028bc0786c327/maintainability)](https://codeclimate.com/github/expede/ethereum-status-codes/maintainability)
 
 This standard outlines a common set of Status Codes in the same
 vein as HTTP statuses. This provides a shared set of signals to allow smart contracts
