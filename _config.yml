@@ -2,13 +2,16 @@ title: FISSION Suite
 logo: https://s3-ca-central-1.amazonaws.com/images.spade.builders/uploads/upload_55c7620948a74acb1228d308491e3439.png
 email: hello@spade.builders
 description: >- # this means to ignore newlines until "baseurl:"
-  The FISSION Suite powers microservices for Web3. It starts by defining common Status Codes for communication and control flow between smart contracts, and then builds additional functionality and protocols on top of those codes.
+  The FISSION Suite powers microservices for Web3. It starts by defining common Status Codes for communication and control flow between smart contracts, and then builds additional functionality and protocols on top of those codes. Maintained by the Special Projects & Decentralized Engineering Company, an open source foundation.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://fission.codes" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: SPADEbuilders
 github_username:  SPADEbuilders
+github: https://github.com/fission-suite/fission-codes-web
 
-permalink: :title
+permalink: /:categories/:title
+
+excerpt_separator: "<!-- more -->"
 
 # Build settings
 markdown: kramdown
