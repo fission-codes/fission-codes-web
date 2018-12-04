@@ -608,5 +608,5 @@ function appCode(Sleep _state) returns (byte code) {
 
 Reference cases and helper libraries (Solidity and JS) can be found at:
 
-* [Source Code](https://github.com/expede/ethereum-status-codes/)
-* [Package on npm](https://www.npmjs.com/package/ethereum-status-codes)
+* [Source Code](https://github.com/fission-suite/fission-codes)
+* [Package on npm](https://www.npmjs.com/package/fission-codes)

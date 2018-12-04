@@ -4,7 +4,7 @@ title: About
 has_children: true
 parent: About
 permalink: /about/
-nav_order: 6
+nav_order: 20
 ---
 FISSION implements a standardized set of codes that enables interoperability and messaging between smart contracts. It is blockchain agnostic, as its single byte design can be implemented in any system or programming language. The initial implementation is being done on the Ethereum blockchain and other systems which utilize the Ethereum Virtual Machine.
 
