@@ -7,6 +7,7 @@ category:
 tags:
   - Consensys
   - Tachyon
+featured: true
 ---
 <img alt="Tachyon Accelerator by Consensys Ventures - Logo" src="/assets/images/tachyon.png" />
 

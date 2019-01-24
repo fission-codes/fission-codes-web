@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<ul>
+{% assign posts = site.categories["Ethereum Classic"] | sort: reverse %}
+{% for update in etcposts %}
+  <li>{% update.date | date_to_string: "ordinal", "US" %}: {% update.body %}</li>
+{% endfor %}
+</ul>

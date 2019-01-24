@@ -16,7 +16,8 @@ At the beginning of the web, HTTP's status codes empowered the API-driven intero
 
 ---
 
-{% for post in site.posts limit:1 %}
+{% assign newsposts = site.categories["News"] | where: "featured", true %}
+{% for post in newsposts limit:1 %}
 <article style="background-color: RGBA(100,70,250, .2); padding: 0.3em 2.0em 0.5em 2.0em">
   <div class="article-head">
     <h2 class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>

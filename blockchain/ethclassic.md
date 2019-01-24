@@ -6,10 +6,15 @@ parent: Blockchain
 nav_order: 6
 ---
 
-This page will serve as notes for Ethereum Classic specific usages of the FISSION Suite.
+<h2>Notes for Ethereum Classic specific usages of the FISSION Suite</h2>
 
-Please follow the [ECIP process](https://github.com/ethereumclassic/ECIPs) to track progress of inclusion, or join the [#ethclassic channel on SPADE's Discord](https://discord.gg/y9WwZZy).
+<p>Please follow the Ethereum Classic Improvement Proposal <a href="https://github.com/ethereumclassic/ECIPs">ECIP process</a> to track progress of inclusion, or join the <a href="https://discord.gg/y9WwZZy">#ethclassic channel on our Discord</a>.</p>
 
-## 2019-01-12 ECIP 50 Assigned to FISSION Status Codes
+<h2>Updates</h2>
 
-[FISSION Codes](/fission-codes/) has been accepted as a draft in the [Ethereum Classic repo](https://github.com/ethereumclassic/ECIPs/blob/master/ECIPs/ECIP-1050.md).
+<ul>
+{% assign etcposts = site.tags["Ethereum Classic"] | sort: reverse %}
+{% for update in etcposts %}
+  <li><strong>{{ update.date | date_to_string: "ordinal", "US" }}:</strong> {{ update.content | remove: "<p>" | remove: "</p>" }}</li>
+{% endfor %}
+</ul>
