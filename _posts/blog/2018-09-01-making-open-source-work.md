@@ -7,9 +7,10 @@ category:
 tags:
   - SPADE
 featured: false
+author: Brooklyn Zelenka
 ---
 After several months of research, experimentation, soul searching, and [tweeted hints](https://twitter.com/bmann/status/1034239614045716480), we are thrilled to share [Special Projects & Decentralized Engineering (SPADE)](spade.builders) with the world! In short, we are a [PBC](https://en.wikipedia.org/wiki/Public-benefit_corporation) dedicated to making open source projects succeed & remain sustainable!
-
+<!-- more -->
 > A sword, a spade, and a thought should never be allowed to rust.
 > -James Stephens, The Crock of Gold
 

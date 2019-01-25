@@ -3,6 +3,7 @@ layout: default
 title: Updates
 parent: Updates
 has_children: true
+permalink: /updates/
 nav_order: 20
 ---
 

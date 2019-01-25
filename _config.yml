@@ -9,7 +9,15 @@ twitter_username: SPADEbuilders
 github_username:  SPADEbuilders
 github: https://github.com/fission-suite/fission-codes-web
 
-permalink: /:categories/:title
+permalink: /:title/
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "default"
+      permalink: /post/:title
 
 excerpt_separator: "<!-- more -->"
 
