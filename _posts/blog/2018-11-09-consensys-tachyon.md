@@ -5,7 +5,7 @@ date:   2018-11-10 10:27:20 -0800
 category:
   - News
 tags:
-  - Consensys
+  - ConsenSys
   - Tachyon
 featured: true
 ---
