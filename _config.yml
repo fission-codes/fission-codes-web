@@ -1,5 +1,5 @@
 title: FISSION Suite
-logo: https://s3-ca-central-1.amazonaws.com/images.spade.builders/uploads/upload_55c7620948a74acb1228d308491e3439.png
+logo: https://images.spade.builders/uploads/upload_55c7620948a74acb1228d308491e3439.png
 email: hello@spade.builders
 description: >- # this means to ignore newlines until "baseurl:"
   The FISSION Suite powers microservices for Web3. It starts by defining common Status Codes for communication and control flow between smart contracts, and then builds additional functionality and protocols on top of those codes. Maintained by the Special Projects & Decentralized Engineering Company, an open source foundation.
@@ -10,6 +10,9 @@ github_username:  SPADEbuilders
 github: https://github.com/fission-suite/fission-codes-web
 
 permalink: /:title/
+
+icon: https://images.spade.builders/uploads/upload_4b96958ac61e2564e2c971617bb14b29.png
+favicon: https://images.spade.builders/uploads/upload_f869681e203060e3b678589f016f9bc9.png
 
 defaults:
   -

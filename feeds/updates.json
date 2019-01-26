@@ -1,0 +1,32 @@
+---
+layout: nil
+---
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ "FISSION Updates" | xml_escape }}",
+    "home_page_url": "{{ site.url }}{{ site.baseurl | absolute_url }}",
+    "feed_url": "{{ "/updates.json" | absolute_url }}",
+    "description": {{ site.description | jsonify }},
+    "icon": "{{ site.icon | absolute_url }}",
+    "favicon": "{{ site.favicon | absolute_url }}",
+    "expired": false,
+    "items": [
+    {% assign updates = site.categories["Updates"] | limit: 15 %}
+    {% for update in updates %}
+      {% capture content_text %}{{ update.content | strip_html }}{% endcapture %}
+      {% capture content_html %}{{ update.content | markdownify }}{% endcapture %}
+      {
+        "id": "{{ update.url | absolute_url | sha1 }}",
+        {% if update.title != "" %}"title": {{ update.title | jsonify }},{% endif %}
+        "content_text": {{ content_text | jsonify }},
+        "content_html": {{ content_html | jsonify }},
+        "url": "{{ update.url | absolute_url}}",
+        "date_published": "{{ update.date | date_to_xmlschema }}",
+        {% if update.modified %}"date_modified": "{{ update.modified | date_to_xmlschema }}",{% endif %}
+        "author": {
+          "name": "FISSION"
+        }
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ]
+}
