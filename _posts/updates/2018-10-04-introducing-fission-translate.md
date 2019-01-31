@@ -8,5 +8,6 @@ tags:
   - localization
   - smart contract
 featured: true
+project: fissiontranslate
 ---
 Jenn posted a blog on our Medium: [Introducing FISSION Translate: A Global Translation Layer for Smart Contract Communication](https://medium.com/spadebuilders/introducing-fission-translate-a-global-translation-layer-for-smart-contract-communication-bacd61110e82).

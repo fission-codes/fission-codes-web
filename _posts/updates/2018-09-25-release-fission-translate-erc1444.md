@@ -9,5 +9,6 @@ tags:
   - EIPs
   - Ethereum
 featured: true
+project: fissiontranslate
 ---
 We've released [FISSION Translate](/fission-translate/)! FISSION Codes have been refactored to split out translate functionality. We now have [ERC1444 accepted as a Draft EIP](https://github.com/ethereum/EIPs/pull/1444).

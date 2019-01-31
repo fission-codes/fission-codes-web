@@ -1,18 +1,19 @@
-title: FISSION Suite
-logo: https://images.spade.builders/uploads/upload_55c7620948a74acb1228d308491e3439.png
+title: FISSION
+logo: https://images.spade.builders/uploads/upload_55c7620948a74acb1228d308491e3439.png # transparent FISSION logo + black text
 email: hello@spade.builders
 description: >- # this means to ignore newlines until "baseurl:"
-  The FISSION Suite powers microservices for Web3. It starts by defining common Status Codes for communication and control flow between smart contracts, and then builds additional functionality and protocols on top of those codes. Maintained by the Special Projects & Decentralized Engineering Company, an open source foundation.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://fission.codes" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: SPADEbuilders
-github_username:  SPADEbuilders
+  FISSION powers microservices for Web3.
+baseurl: ""
+url: "https://fission.codes"
+twitter_username: FISSIONcodes
+github_username:  FISSION-Suite
 github: https://github.com/fission-suite/fission-codes-web
 
 permalink: /:title/
 
 icon: https://images.spade.builders/uploads/upload_4b96958ac61e2564e2c971617bb14b29.png
 favicon: https://images.spade.builders/uploads/upload_f869681e203060e3b678589f016f9bc9.png
+social: https://images.spade.builders/uploads/upload_d0e2a4d44acf975c9b748ce7d47f5a94.png # FISSION white background
 
 defaults:
   -
@@ -24,8 +25,22 @@ defaults:
 
 excerpt_separator: "<!-- more -->"
 
-# Build settings
+exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor", ".bundle", ".sass-cache"]
+
 markdown: kramdown
-theme: "just-the-docs"
+
 plugins:
   - jekyll-feed
+
+# THEME: just-the-docs
+theme: "just-the-docs"
+search_enabled: true
+aux_links:
+  '<i class="fab fa-github"></i> FISSION Suite':
+    - "//github.com/fission-suite"
+  '<i class="fab fa-discord"></i> Discord #lobby':
+    - "https://discord.gg/daDMAjE"
+  '<i class="fab fa-twitter"></i> @FISSIONcodes':
+    - "https://twitter.com/FISSIONcodes"
+
+color_scheme: nil
