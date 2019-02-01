@@ -176,7 +176,7 @@ Special token and financial concepts. Many related concepts are included in othe
 | `0x5C` | [reserved]                      |
 | `0x5D` | [reserved]                      |
 | `0x5E` | [reserved]                      |
-| `0x5F` | Token or Fiunancial Information |
+| `0x5F` | Token or Financial Information |
 
 #### `0x6*` TBD
 
