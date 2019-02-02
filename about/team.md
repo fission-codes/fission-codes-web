@@ -5,7 +5,7 @@ parent: About
 nav_order: 4
 ---
 
-FISSION is maintained by the [Special Projects & Decentralized Engineering Company](https://spade.builders), a foundation dedicated to supporting sustainable open source.
+FISSION is maintained by the [Special Projects & Decentralized Engineering Company](https://spade.builders), a Delaware Public Benefit Corporation dedicated to supporting sustainable open source.
 
 ## Brooklyn Zelenka, CEO & Chief Scientist
 

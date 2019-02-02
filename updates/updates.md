@@ -9,12 +9,12 @@ nav_order: 100
 
 # Updates
 
+{% assign postsByYearMonth = site.categories["Updates"] | group_by_exp:"post", "post.date | date: '%Y %B'"  %}
+{% for yearMonth in postsByYearMonth %}
+<h3>{{ yearMonth.name }}</h3>
 <ul>
-{% assign updates = site.categories["Updates"] %}
-{% for update in updates %}
-  {% capture tags %}
-    <span class="taglist" style="font-size: small; font-color: gray">{% for tag in update.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
-  {% endcapture %}
-  <li><strong>{{ update.date | date_to_string: "ordinal", "US" }}:</strong> {{ update.content | remove: "<p>" | remove: "</p>" }} {{ tags }}</li>
+{% for post in yearMonth.items %}
+<li class="pb-2">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}&nbsp;<small><a href="{{ post.url }}"><i class="fa fa-link" aria-hidden="true"></i></a></small></li>
 {% endfor %}
 </ul>
+{% endfor %}
