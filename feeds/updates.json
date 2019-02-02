@@ -25,7 +25,13 @@ layout: null
         {% if update.modified %}"date_modified": "{{ update.modified | date_to_xmlschema }}",{% endif %}
         "author": {
           "name": "FISSION"
-        }
+        }{% if update.video %},
+        "attachments": [
+          {
+              "url": "{{ update.video }}",
+              "mime_type": "video/mp4",
+          }
+        ]{% endif %}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
     ]

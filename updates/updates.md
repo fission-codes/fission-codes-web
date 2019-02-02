@@ -4,7 +4,7 @@ title: Updates
 parent: Updates
 has_children: true
 permalink: /updates/
-nav_order: 20
+nav_order: 100
 ---
 
 # Updates

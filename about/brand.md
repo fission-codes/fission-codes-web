@@ -2,6 +2,7 @@
 layout: default
 title: Brand
 parent: About
+nav_order: 20
 ---
 
 1. Table of Contents
