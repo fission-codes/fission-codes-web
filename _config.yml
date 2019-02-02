@@ -3,6 +3,7 @@ logo: https://images.spade.builders/uploads/upload_55c7620948a74acb1228d308491e3
 email: hello@spade.builders
 description: >- # this means to ignore newlines until "baseurl:"
   FISSION powers microservices for Web3.
+home: Powering Web3 # Used to over ride "home" as page title
 baseurl: ""
 url: "https://fission.codes"
 twitter_username: FISSIONcodes
@@ -13,7 +14,7 @@ permalink: /:title/
 
 icon: https://images.spade.builders/uploads/upload_4b96958ac61e2564e2c971617bb14b29.png
 favicon: https://images.spade.builders/uploads/upload_f869681e203060e3b678589f016f9bc9.png
-social: https://images.spade.builders/uploads/upload_d0e2a4d44acf975c9b748ce7d47f5a94.png # FISSION white background
+social: https://images.spade.builders/uploads/upload_4b893e90998a6582393ad40a7c0de5dd.png # FISSION white background
 
 #collections:
 #  projects:
