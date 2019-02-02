@@ -6,6 +6,7 @@ parent: FISSION Translate
 permalink: /fission-translate/
 nav_order: 3
 ---
+# FISSION Translate
 
 ## A method of converting machine codes to human-readable text in any language and phrasing.
 

@@ -3,6 +3,7 @@ layout: update
 date:   2019-01-12 20:27:20 -0800
 category:
   - Updates
+project: fissioncodes
 tags:
   - Ethereum Classic
   - FISSION Codes

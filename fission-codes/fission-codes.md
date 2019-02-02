@@ -6,6 +6,7 @@ parent: FISSION Codes
 permalink: /fission-codes/
 nav_order: 2
 ---
+# FISSION Codes
 
 ## Broadly applicable status codes for smart contracts.
 

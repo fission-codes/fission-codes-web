@@ -15,6 +15,10 @@ icon: https://images.spade.builders/uploads/upload_4b96958ac61e2564e2c971617bb14
 favicon: https://images.spade.builders/uploads/upload_f869681e203060e3b678589f016f9bc9.png
 social: https://images.spade.builders/uploads/upload_d0e2a4d44acf975c9b748ce7d47f5a94.png # FISSION white background
 
+#collections:
+#  projects:
+#    output: true
+
 defaults:
   -
     scope:

@@ -3,6 +3,7 @@ layout: update
 date:   2018-09-13 22:27:20 -0800
 category:
   - Updates
+project: fissioncodes
 tags:
   - FISSION Codes
   - EthMagicians
