@@ -1,0 +1,47 @@
+---
+label: Updates
+hide_body: false
+is_partial: false
+fields:
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - chainid
+    - evmevolution
+    - fissioncodes
+  name: project
+  label: Project
+  description: Is this for a particular project?
+- type: tag_list
+  name: tags
+  label: Tags
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - Updates
+    required: true
+  hidden: true
+  name: categories
+  label: Categories
+  description: This should be defaulted to Updates
+- type: boolean
+  name: featured
+  label: Featured Post
+- type: text
+  name: layout
+  config:
+    required: true
+  label: Layout
+  hidden: true
+- type: datetime
+  name: date
+  label: Post Date
+  config:
+    required: true
+    date_format: YYYY-MM-DD
+    time_format: h:mm
+- type: textarea
