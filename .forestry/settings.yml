@@ -14,7 +14,7 @@ upload_dir: uploads
 public_path: https://images.spade.builders/uploads
 front_matter_path: ''
 use_front_matter_path: 
-file_template: ":filename:"
+file_template: ":year:/:month:/:filename:"
 build:
   preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
   publish_command: bundle exec jekyll build -d _site
