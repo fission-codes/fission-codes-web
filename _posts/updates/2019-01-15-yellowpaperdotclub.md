@@ -9,4 +9,4 @@ tags:
   - Yellow Paper
 featured: true
 ---
-[Thanks to Brooke](https://twitter.com/expede/status/1085256161971003392), you can now access the Ethereum Yellow Paper at [yellowpaper.club](https://yellowpaper.club).
+[Thanks to Brooke](https://twitter.com/expede/status/1085256161971003392), you can now access the Ethereum Yellow Paper at [yellowpaper.club](http://yellowpaper.club).
