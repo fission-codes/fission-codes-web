@@ -6,7 +6,7 @@ nav_order: 4
 ---
 
 ## Format
-{:no_toc}
+{:.no_toc}
 
 Codes are returned either on their own, or as the first value of a multiple return.
 

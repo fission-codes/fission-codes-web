@@ -7,7 +7,7 @@ permalink: /community/
 nav_order: 8
 ---
 
-We work with a wide variety of different communities.
+We work with a wide variety of different communities and community projects. These are some selected projects that we participate in.
 
 1. Table of Contents
 {:toc}

@@ -6,7 +6,7 @@ permalink: /evm-evolution/specification/
 nav_order: 2
 ---
 
-## EVM Specification
+# EVM Specification
 
 Improving and maintaining the Ethereum Virtual Machine (EVM) specification, including a focus on the Jello Paper as a more complete specification for implementers and testers.
 
@@ -20,7 +20,7 @@ The [Jello Paper](https://jellopaper.org/) defines the semantics of the EVM usin
 
 ## Completed
 
-* Purchased and setup a redirect for yellowpaper-dot-io, so that [yellowpaper.club](https://yellowpaper.club) points to the PDF
+* Purchased and setup a redirect for yellowpaper-dot-io, so that [yellowpaper.club](http://yellowpaper.club) points to the PDF
 * Kicked off [discussion on EthMagicians on making the Jello Paper the canonical representation of the EVM spec](https://ethereum-magicians.org/t/jello-paper-as-canonical-evm-spec/2389)
 * Requested filing of an issue to [generate the Jello Paper as part of CI job](https://github.com/kframework/evm-semantics/issues/293)
 
