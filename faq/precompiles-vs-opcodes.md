@@ -17,8 +17,8 @@ For opcodes, smart contract languages (Solidity, Vyper, etc.) need to explicitly
 
 For precompiles, smart contract languages see it just as any other call to an external smart contract library. So, the one benefit to precompiles, is that it can be deployed and implemented in Ethereum clients without having to have specific support in the smart contract language. For alternate chains, this is one way they might launch different, unique features
 
-Since hardforks are typically planned well in advance, and smart contract languages. 
+Since hardforks are typically planned well in advance, and smart contract languages.
 
 ## Can we add more opcodes / implement precompiles as opcodes?
 
-Yes! No reason not to do this. There's lots of room.
+Yes. There is likely going to be a need to start tracking available opcodes, but right now there is still room.

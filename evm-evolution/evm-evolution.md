@@ -38,15 +38,15 @@ Our goal is a fully formalized EVM that implements an interpreter and a compiler
 
 We are a bootstrapped team who are working on low-level, open source infrastructure for the wider EVM ecosystem. We are open to prioritizing specific work or performing primary research related to EVM improvements. [Please get in touch if you're interested in working with us](https://spade.builders).
 
-### Grants
+### EF Grant Application
 
 We have an outstanding grant application to the Ethereum Foundation suggesting 6 months of funding to begin with. This will allow the team to dedicate our time to preparing [EIP 615 Static Jumps](eip-615/) for the [Istanbul hardfork](https://en.ethereum.wiki/roadmap/istanbul), including supporting client teams.
 
 ### Gitcoin Grants
 
-We have setup a Gitcoin Grant asking for the monthly amount we need to fully focus on this. See the [EVM Evolution Gitcoin Grants page](https://gitcoin.co/grants/47/evm-evolution) for more information.
+We have setup a Gitcoin Grant asking for the monthly amount we need to fully focus on this.
 
-If our EF Grant is approved, this will fully cover our needs for 6 months.
+<a href="https://gitcoin.co/grants/47/evm-evolution" class="btn btn-purple">Contribute to Gitcoin Grant</a>
 
 ## Updates
 

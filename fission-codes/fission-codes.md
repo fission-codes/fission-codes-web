@@ -16,8 +16,22 @@ The current state of the art is to either `revert` on anything other than a clea
 
 As is the case with HTTP, having a standard set of known codes has many benefits for developers. They remove friction from needing to develop your own schemes for every contract, makes inter-contract automation easier, and makes it easier to broadly understand which of the finite states your request produced. Importantly, it makes it much easier to distinguish between expected errors states, truly exceptional conditions that require halting execution, normal state transitions, and various success cases.
 
+1. Table of Contents
+{:toc}
+
+## Funding
+
+### Gitcoin Grants
+
+We would like to fund more work with bounties on implementation of contracts that use status codes, audits of re-usable contracts, and continue growing the number of languages supported by FISSION Translate. This grant will allow us to commit on-going maintenance, new standard creation, implementation for other smart contract and programming languages, other blockchains, and actively dedicate time to continuing to improve, evolve, and support the system.
+
+<a href="https://gitcoin.co/grants/43/fission-codes" class="btn btn-purple">Contribute to Gitcoin Grant</a>
+
+### Tachyon18 by ConsenSys Ventures
+
+We were part of the ConsenSys Ventures Tachyon accelerator program 2018 fall cohort. Thank you to ConsenSys for the generous open source grant. We [completed the program in mid November 2018](https://fission.codes/post/consensys-tachyon).
+
 ## Updates
-{:.no_toc}
 
 <ul>
 {% assign projectposts = site.posts | where: "project", "fissioncodes" %}
@@ -27,9 +41,6 @@ As is the case with HTTP, having a standard set of known codes has many benefits
 </ul>
 
 ---
-
-1. Table of Contents
-{:toc}
 
 ## Presentations
 
