@@ -8,5 +8,6 @@ tags:
   - JavaScript
   - FISSION Codes
 featured: true
+project: fissioncodes
 ---
 The FISSION Solidity and JavaScript libraries have hit v1.0.0-RC1 🎉🎉🎉 [Check out the Github repo](https://github.com/fission-suite/fission-codes).

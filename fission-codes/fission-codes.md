@@ -7,14 +7,43 @@ permalink: /fission-codes/
 nav_order: 2
 ---
 # FISSION Codes
-
+{:.no_toc}
 ## Broadly applicable status codes for smart contracts.
-
+{:.no_toc}
 This standard outlines a common set of status codes in a similar vein to HTTP statuses. This provides a shared set of signals to allow smart contracts to react to situations autonomously, expose localized error messages to users, and so on.
 
 The current state of the art is to either `revert` on anything other than a clear success (ie: require human intervention), or return a low-context `true` or `false`. Status codes are similar-but-orthogonal to `revert`ing with a reason, but aimed at automation, debugging, and end-user feedback (including translation). _They are fully compatible with both `revert` and `revert`-with-reason._
 
 As is the case with HTTP, having a standard set of known codes has many benefits for developers. They remove friction from needing to develop your own schemes for every contract, makes inter-contract automation easier, and makes it easier to broadly understand which of the finite states your request produced. Importantly, it makes it much easier to distinguish between expected errors states, truly exceptional conditions that require halting execution, normal state transitions, and various success cases.
+
+## Updates
+{:.no_toc}
+
+<ul>
+{% assign projectposts = site.posts | where: "project", "fissioncodes" %}
+{% for post in projectposts limit: 5 %}
+  <li><strong>{{ post.date | date_to_string: "ordinal", "US" }}:</strong> {{ post.content | remove: "<p>" | remove: "</p>" }}</li>
+{% endfor %}
+</ul>
+
+---
+
+1. Table of Contents
+{:toc}
+
+## Presentations
+
+### ERC1066: Better UX & DX in Just One Byte - DevCon4 - Nov 1, 2018
+
+<div id="presentation-embed-38911936"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+    embed = new SlidesLiveEmbed('presentation-embed-38911936', {
+        presentationId: '38911936',
+        autoPlay: false // change to true to autoplay the embedded presentation
+    });
+</script>
+
 
 ## Implementation
 
