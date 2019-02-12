@@ -32,6 +32,10 @@ To quote [EIP-616](https://github.com/ethereum/EIPs/issues/616):
 
 (example: flag to enable native 32-bit arithmetic on the EVM)
 
+## Memory
+
+### Arbitrary local memory alignment (easier to solve for and much faster symbolic execution than byte-aligned)
+
 ## Analytic Optimization
 
 client-specific, but can write general guidelines and reference implementations in Parity, EeVeeM, &c

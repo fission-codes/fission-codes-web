@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Illuminati Client
-has_children: true
-parent: Illuminati Client
-permalink: /illuminati/
+parent: EVM Evolution
+permalink: /evm-evolution/illuminati/
 nav_order: 7
 ---
 
