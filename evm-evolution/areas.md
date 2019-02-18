@@ -12,28 +12,34 @@ nav_order: 4
 
 ### Safety / Correctness
 
-* Opcodes
-  * Subroutines
-  * Static jumps
-  * Non-overflowing arithmetic
-  * Ephemeral storage (ie: single transaction lifetime)
-* Memory
-  * Arbitrary local memory alignment (easier to solve for and much faster symbolic execution than byte-aligned)
+#### Opcodes
+
+* Subroutines
+* Static jumps
+* Non-overflowing arithmetic
+* Ephemeral storage (ie: single transaction lifetime)
+
+#### Memory
+* Arbitrary local memory alignment (easier to solve for and much faster symbolic execution than byte-aligned)
 
 ### Raw Performance
 
-* Opcodes
-  * SIMD
-  * MIMD (maybe)
-    * Variable-width VM word size (example: fag to enable native 32-bit arithmetic on the EVM)
-* Analytic Optimization (client-specific, but can write general guidelines and reference implementations in Parity, EeVeeM, &c)
-  * VM-level tail call optimization
-  * Incremental JIT optimization
-  * EVM-to-native smart contract compilation
-  * Automatic naive wordsize detection (ex. sequences of `ADDMOD 32` don’t need to store as 256-bit)
-    * Adjust gas cost to make native wordsize (or easily aligned) operations cheaper
-  * Decoupled gas metering / gas aggregation
-  * Shared bytecode linking (contract size)
+#### Opcodes
+* SIMD
+* MIMD (maybe)
+* Variable-width VM word size (example: fag to enable native 32-bit arithmetic on the EVM)
+
+#### Analytic Optimization
+
+Client-specific, but can write general guidelines and reference implementations in Parity, EeVeeM, &c
+
+* VM-level tail call optimization
+* Incremental JIT optimization
+* EVM-to-native smart contract compilation
+* Automatic naive wordsize detection (ex. sequences of `ADDMOD 32` don’t need to store as 256-bit)
+  * Adjust gas cost to make native wordsize (or easily aligned) operations cheaper
+* Decoupled gas metering / gas aggregation
+* Shared bytecode linking (contract size)
 
 ### Simplicity / Clean Up
 
@@ -53,7 +59,7 @@ Programs and proofs are equivalent in this paradigm. A major advantage of this a
 
 With dependent types, we can encode arbitrarily complex rules into our programs at the type level. The tradeoff is that inductive proofs can sometimes become equally involved. Several of these languages provide a tactic sublanguage to help solve for these cases.
 
-The syntax of these languages are generally familiar to programmers with a background in typed functional languages like Haskell, Elm, and OCaml. As a warmup to this end, I’ve been working on the “EeVeeM,” a Haskell EVM (not yet publicly available). It is geared towards rapid R&D, but also is modular and with clean abstractions for tuning performance or plugging in external code, while remaining readable.
+The syntax of these languages are generally familiar to programmers with a background in typed functional languages like Haskell, Elm, and OCaml. As a warmup to this end, we’ve been working on the “EeVeeM,” a Haskell EVM (not yet publicly available). It is geared towards rapid R&D, but also is modular and with clean abstractions for tuning performance or plugging in external code, while remaining readable.
 
 ### Strategy 2: High Level Program Synthesis or Constraint Programming [K, TLA+, or Prolog]
 
