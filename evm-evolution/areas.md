@@ -8,6 +8,8 @@ nav_order: 2
 
 # EVM Evolution Areas
 
+These are some broad research and development areas that we are investigating and discussing that fit under the scope of EVM Evolution.
+
 ## High Level Overview
 
 ### Safety / Correctness
