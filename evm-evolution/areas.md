@@ -3,7 +3,7 @@ layout: default
 parent: EVM Evolution
 title: Areas
 permalink: /evm-evolution/areas/
-nav_order: 1
+nav_order: 2
 ---
 
 # EVM Evolution Areas
