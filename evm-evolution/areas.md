@@ -29,7 +29,7 @@ These are some broad research and development areas that we are investigating an
 #### Opcodes
 * SIMD
 * MIMD (maybe)
-* Variable-width VM word size (example: fag to enable native 32-bit arithmetic on the EVM)
+* Variable-width VM word size (example: flag to enable native 32-bit arithmetic on the EVM)
 
 #### Analytic Optimization
 
