@@ -8,6 +8,9 @@ tags:
   - ETHCC
   - ETH1x
   - Griff Riff
+  - Austin Griffiths
+  - Griffin Ichiba Hotchkiss
+  - Griff Green
   - video
 featured: false
 ---

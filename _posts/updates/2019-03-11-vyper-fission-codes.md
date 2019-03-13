@@ -8,6 +8,7 @@ tags:
   - vyper
   - FISSION Codes
   - smart contract
+  - Bryant Eisenbach
 featured: false
 ---
 [Bryant](https://twitter.com/fubuloubu) kicked off discussion around [integrating FISSION Codes into Vyper](https://github.com/ethereum/vyper/issues/1345). We'd love to see integration at the smart contract language layer!
