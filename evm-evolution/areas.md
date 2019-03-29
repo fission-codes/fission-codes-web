@@ -12,6 +12,8 @@ These are some broad research and development areas that we are investigating an
 
 ## High Level Overview
 
+![](https://spade.builders/img/posts/evm-evolution-deps.png)
+
 ### Safety / Correctness
 
 #### Opcodes
