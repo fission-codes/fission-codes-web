@@ -31,6 +31,7 @@ defaults:
 excerpt_separator: "<!-- more -->"
 
 exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor", ".bundle", ".sass-cache"]
+include: ["_redirects"]
 
 markdown: kramdown
 
