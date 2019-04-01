@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: fission-suite/fission-codes-web # your GitHub username and repository name, separated by a slash
+  branch: master # optional, default value is "master"
+
+media_folder: "assets/images" # Folder where user uploaded files should go
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "_posts/blog" # The path to the folder where the documents are stored
+    sort: "date:asc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Categories", name: "categories", widget: "list", default: ["News"]}
+      - {label: "Tags", name: "tags", widget: "list", required: false, default: ["community call"]}
+      - {label: "Project", name: "project", widget: "string", required: false, default: "fissioncodes"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: true}
+    meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+  - name: "update" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Update" # Used in the UI, ie.: "New Post"
+    folder: "_posts/updates" # The path to the folder where the documents are stored
+    sort: "date:asc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # identifier_field: slug # Leaving 'Title' in for now, although it is not used
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "update"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Categories", name: "categories", widget: "hidden", default: "Updates"} # Hidden
+      - {label: "Tags", name: "tags", widget: "list", required: false, default: ["community call"]}
+      - {label: "Project", name: "project", widget: "string", required: false, default: "fissioncodes"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+    meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
