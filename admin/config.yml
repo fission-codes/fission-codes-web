@@ -2,6 +2,8 @@ backend:
   name: github
   repo: fission-suite/fission-codes-web # your GitHub username and repository name, separated by a slash
   branch: master # optional, default value is "master"
+  
+publish_mode: editorial_workflow
 
 media_folder: "assets/images" # Folder where user uploaded files should go
 
@@ -29,6 +31,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     # identifier_field: slug # Leaving 'Title' in for now, although it is not used
+    summary: "{{ slug }} ({{ title }})" # command line updates don't have a title
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "update"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
