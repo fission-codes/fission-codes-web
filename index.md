@@ -18,7 +18,16 @@ has_children: false
 </article>
 {% endfor %}
 
-<section class="pt-6 pb-6">
+<section class="pt-2">
+  <h3>Subscribe to news and updates:</h3>
+  <form action="https://api.producthunt.com/widgets/upcoming/v1/upcoming/fission-tools/forms" method="post" id="ph-email-form" name="ph-email-form" target="_blank" class="d-flex">
+    <input type="email" value="" name="email" id="ph-email" placeholder="Email Address" required class="btn btn-outline" />
+    <input type="submit" value="Subscribe" name="subscribe" id="ph-subscribe-button" class="btn ml-2" />
+  </form>
+</section>
+
+<section class="pt-4 pb-6">
+  <h3>Updates</h3>
   <ul>
   {% assign updates = site.categories["Updates"] | where: "featured", true %}
   {% for update in updates limit: 5 %}

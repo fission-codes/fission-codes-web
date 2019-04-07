@@ -10,8 +10,6 @@ tags:
   - RUN EVM
 featured: true
 ---
-<img alt="RUN EVM" src="/assets/images/RUNEVM-W.png" />
-
 We're pleased to make two announcements related to our work on the Ethereum Virtual Machine (EVM).
 
 Brooke has written up our plan to work on improving the EVM in convenient Medium blog format:
@@ -19,13 +17,13 @@ Brooke has written up our plan to work on improving the EVM in convenient Medium
 >
 > [EVM Evolution Roadmap: Towards a More Aggressive Ethereum Execution Engine](https://medium.com/spadebuilders/evm-evolution-roadmap-f8b8e3a73882)
 
-Secondly, we are announcing [RUN EVM: OPCODE 1](https://runevm.com), a one-day conference in Berlin, April 16th, 2019. The EVM is used beyond the Ethereum main-net in a number of contexts, such as private & side chains, and is only seeing more adoption in areas like Trusted Computing. Registration will open later this week, [sign up on the site](https://runevm.com) if you want to speak and/or sponsor.
+Secondly, we are announcing <a href="https://runevm.com">RUN EVM: OPCODE 1</a>, a one-day conference in Berlin, April 16th, 2019. The EVM is used beyond the Ethereum main-net in a number of contexts, such as private & side chains, and is only seeing more adoption in areas like Trusted Computing. Registration will open later this week, <a href="https://runevm.com">sign up on the site</a> if you want to speak and/or sponsor.
 
 <!-- more -->
 
 You can also browse the rest of our [EVM Evolution plans](/evm-evolution/) here on the site.
 
----
+<img alt="RUN EVM" src="/assets/images/RUNEVM_256.png"/>
 
 _Oh yeah, and because we're nerds, OPCODE 1 is the "ADD" command: our first event, and our hope to see the wider EVM community working together._
 
