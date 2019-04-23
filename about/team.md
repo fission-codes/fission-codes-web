@@ -5,20 +5,18 @@ parent: About
 nav_order: 4
 ---
 
-FISSION is maintained by the [Special Projects & Decentralized Engineering Company](https://spade.builders), a Delaware Public Benefit Corporation dedicated to supporting sustainable open source.
-
 ## Brooklyn Zelenka, CEO & Chief Scientist
 
-Community is in Brooklyn's DNA, having participated in feminist, queer, environmental, and tech organizations. She has contributed to open source since entering the industry, and is probably best known for the Witchcraft Suite — [a](https://github.com/expede/type_class) [collection](https://github.com/expede/witchcraft) [of](https://github.com/expede/quark) [libraries](https://github.com/expede/algae) that enable a more principled/algebraic style of programming in Elixir.
+Brooklyn is a brilliant developer who is equally comfortable reading research papers as she is shipping production code. She keynotes major software conferences around the world, with an emphasis on functional programming, virtual machines, and programming language theory. Brooklyn has often been tasked with producing research, first versions, and proof-of-concept software, including shipping code for Facebook, Kickstarter, Uber, Walmart, and other modern internet organizations.
 
-Brooklyn is the founder of the Blockchain Whitepaper Reading Group, [Vancouver Functional Programmers](https://www.meetup.com/Vancouver-Functional-Programmers/), is one of the primary organizers of [Code & Coffee YVR](https://www.meetup.com/codecoffeeyvr/), and mentors the local Haskell Reading Group. She is frequently on the conference circuit as a lecturer, panelist, and mentor, and has given keynotes in Europe and North America.
+Brooklyn has also founded and scaled meetups and events, showcasing her ability to bring technical experts together. She has is the author of a number of Ethereum Improvement Proposals (EIPs), and participates in the Core Dev process, with a special focus on upgrades to the Ethereum Virtual Machine (EVM) design, and smart contract standards.
 
-In the world of Ethereum open standards, she is the primary author of [ERC902](https://eips.ethereum.org/EIPS/eip-902) (token validation) and [ERC1066](https://eips.ethereum.org/EIPS/eip-1066) (status codes), and participates as an Ethereum CoreDev.
+Brooklyn leads software architecture, research, and engineering, and likes shipping software with opinionated, smooth developer experiences.
 
 ## Boris Mann, Co-founder, Community & Operations
 
-Boris brings years of experience building communities and companies, is passionate about open source and standards, and speaks developer fluently.
+Boris has built communities locally and globally, scaling them to tens of thousands of contributors. The last time around it was blogging, open source, and the beginnings of cloud computing, building the Drupal community with the first commercial company supporting the software. He helped found the Drupal Association and organized the global developer meetups until they scaled into the 1000s of attendees. Boris has a history of venture building, as an advisor and investor, founding the first startup accelerator in Canada, running the Full Stack seed fund, and being an active member of Canada's entrepreneurial community.
 
-Boris started with open source while in university, later becoming active in the [Drupal](https://www.drupal.org/) community, and was part of founding of the [Drupal Association](https://www.drupal.org/association). He later focused on founding and funding, creating Bootup Labs (Canada’s first modern startup accelerator), running Full Stack (a small seed fund), and many projects and companies focused on frontier technologies.
+For the past year, Boris has been building social proof and connections in the Ethereum community, as volunteer with Ethereum Magicians, including helping to organize events in Berlin, Prague, and Paris.
 
-Boris has most recently become very engaged with the Ethereum community, including taking a major organizing role with the [Fellowship of Ethereum Magicians](https://ethereum-magicians.org).
+Boris understands open source, community, and developer relations, as well as handling operations & finance for early stage companies.
