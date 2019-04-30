@@ -48,6 +48,14 @@ We have setup a Gitcoin Grant asking for the monthly amount we need to fully foc
 
 <a href="https://gitcoin.co/grants/47/evm-evolution" class="btn btn-purple">Contribute to Gitcoin Grant</a>
 
+## Presentations
+
+### EVM Evolution at Core Devs Berlin, April 2019
+
+Brooke presented at the [Core Devs Berlin meetings](https://en.ethereum.wiki/eth1/coredevsberlin#evm-evolution-eip-615) with a run down of all the changes and improvements that are possible for the EVM.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qck2KBqT14o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Updates
 
 Besides our own updates that are EVM Evolution related, you can also view [EVM Evolution topics on the EthMagicians forum](https://ethereum-magicians.org/tags/evm-evolution).
