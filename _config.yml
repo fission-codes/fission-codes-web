@@ -2,7 +2,7 @@ title: FISSION
 logo: https://images.spade.builders/uploads/upload_55c7620948a74acb1228d308491e3439.png # transparent FISSION logo + black text
 email: hello@fission.codes
 description: >- # this means to ignore newlines until "baseurl:"
-  FISSION powers microservices for Web3.
+  Developer tools for hostless apps - IPFS, Ethereum and other decentralized web technologies
 home: "Documentation & Open Source Projects" # Used to over ride "home" as page title
 baseurl: ""
 url: "https://docs.fission.codes"
@@ -48,4 +48,4 @@ aux_links:
 
 color_scheme: nil
 
-product_hunt_widget: true
+product_hunt_widget: false
