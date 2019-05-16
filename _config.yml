@@ -1,11 +1,11 @@
 title: FISSION
 logo: https://images.spade.builders/uploads/upload_55c7620948a74acb1228d308491e3439.png # transparent FISSION logo + black text
-email: hello@spade.builders
+email: hello@fission.codes
 description: >- # this means to ignore newlines until "baseurl:"
   FISSION powers microservices for Web3.
-home: Powering Web3 # Used to over ride "home" as page title
+home: "Documentation & Open Source Projects" # Used to over ride "home" as page title
 baseurl: ""
-url: "https://fission.codes"
+url: "https://docs.fission.codes"
 twitter_username: FISSIONcodes
 github_username:  FISSION-Suite
 github: https://github.com/fission-suite/fission-codes-web

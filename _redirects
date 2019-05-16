@@ -5,4 +5,4 @@ https://ethereumstatus.codes/* https://fission.codes/:splat 301!
 https://www.ethereumstatus.codes/* https://fission.codes/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
-https://fissioncodesjekyll.netlify.com/* https://fission.codes/:splat 301!
+https://fissioncodesjekyll.netlify.com/* https://docs.fission.codes/:splat 301!
